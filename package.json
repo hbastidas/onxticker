@@ -1,0 +1,14 @@
+{
+  "name": "onxticker",
+  "version": "1.0.0",
+  "description": "a simple stream onix ticker",
+  "main": "index.js",
+  "bin": {
+    "onxticker": "./bin/onxticker.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
