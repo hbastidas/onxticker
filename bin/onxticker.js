@@ -1,14 +1,28 @@
 #!/usr/bin/env node
-let Ticker = require('../index');
-let ticker = new Ticker();
+const Ticker = require('../index');
+const ticker = new Ticker();
+const i18n = require("i18n");
+const osLocale = require('os-locale');
 
-//running
-process.argv.slice(2).forEach(element => {
-  ticker.price(element.toUpperCase()).then(data=>{
-    console.log(data);
-  });
+
+i18n.configure({
+    locales:['en_US'], //add here your translate file..
+    register: global,
+    directory: __dirname + '/../locales'
 });
 
-if(process.argv.slice(2).length==0){
-  process.stdout.write("use a usd or vef argument\n\r");
-}
+(async () => {
+	let syslocale=await osLocale();
+  i18n.setLocale(syslocale);
+  //running
+  process.argv.slice(2).forEach(element => {
+    ticker.price(element.toUpperCase()).then(data=>{
+      console.log(__("buy")+": "+data.buy);
+      console.log(__("sell")+": "+data.sell);
+    });
+  });
+
+  if(process.argv.slice(2).length==0){
+    console.log(__("use a usd or vef argument"));
+  }
+})();

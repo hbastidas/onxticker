@@ -1,14 +1,16 @@
 {
   "name": "onxticker",
-  "version": "1.0.0",
-  "description": "a simple stream onix ticker",
+  "version": "1.0.1",
+  "description": "amazing little library to standardize onixcoin pricing",
   "main": "index.js",
   "bin": {
     "onxticker": "./bin/onxticker.js"
   },
-  "author": "",
+  "author": "Heber Bastidas",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "i18n": "^0.8.3",
+    "os-locale": "^3.0.0"
   }
 }
