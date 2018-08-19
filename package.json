@@ -7,7 +7,7 @@
     "onxticker": "./bin/onxticker.js"
   },
   "author": "Heber Bastidas",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
     "i18n": "^0.8.3",
