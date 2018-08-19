@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Getting Started</title>
+</head>
+
+<body>
+  <script src="onxticker.js"></script>
+  <script >
+  const ticker = new onxticker();
+  ticker.price("vef").then(data=>{
+      console.log(data.buy);
+      console.log(data.sell);
+  });
+  </script>
+
+</body>
+
+</html>

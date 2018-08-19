@@ -6,11 +6,18 @@
   "bin": {
     "onxticker": "./bin/onxticker.js"
   },
+  "scripts":{
+    "build": "webpack --output-library onxticker"
+  },
   "author": "Heber Bastidas",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
     "i18n": "^0.8.3",
     "os-locale": "^3.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
   }
 }
