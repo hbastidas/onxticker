@@ -9,3 +9,7 @@ https://runkit.com/hbastidas/runkit-npm-onxticker
 
 ## terminal use
 $ onxticker vef
+
+## inspired by
+thanks to @abejarano for develop a django package, your can see in
+https://github.com/abejarano/app_onix_price
