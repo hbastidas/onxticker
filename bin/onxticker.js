@@ -19,6 +19,8 @@ i18n.configure({
     ticker.price(element.toUpperCase()).then(data=>{
       console.log(__("buy")+": "+data.buy);
       console.log(__("sell")+": "+data.sell);
+    }).catch(err=>{
+      console.log(err)
     });
   });
 
