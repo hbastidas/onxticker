@@ -21,12 +21,13 @@ OnxTicker.prototype.getavg=function(currency){
 
 
 OnxTicker.prototype.price=async function(currency){
+  self=this;
   const onx_btc = axios("https://yobit.net/api/2/onx_btc/ticker");
   const btc_usd = axios("https://yobit.net/api/2/btc_usd/ticker");
   const bitcoinaverage = axios("https://localbitcoins.com/bitcoinaverage/ticker-all-currencies/");
 
   const [yonx, ybtc, localbitcoin] = await Promise.all([onx_btc, btc_usd, bitcoinaverage]).catch(error => {
-    throw (error.response.status + " in "+ this.url)
+    throw (error.response.status + " in "+ self.url)
   });
 
   this.data_yobit.btc_onx=yonx.data;
